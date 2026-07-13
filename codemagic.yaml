@@ -1,0 +1,19 @@
+workflows:
+  build-android-apk:
+    name: Gerar APK Android
+    environment:
+      node: 20.x
+    scripts:
+      - name: Instalar dependências do projeto
+        script: npm install
+      - name: Compilar o site (Vite)
+        script: npm run build
+      - name: Sincronizar os arquivos com o Capacitor
+        script: npx cap sync android
+      - name: Gerar o APK no Android
+        script: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/apk/debug/**/*.apk
