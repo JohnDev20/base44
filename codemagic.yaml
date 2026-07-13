@@ -2,7 +2,7 @@ workflows:
   build-android-apk:
     name: Gerar APK Android
     environment:
-      node: 20.x
+      node: 20
     scripts:
       - name: Instalar dependências do projeto
         script: npm install
