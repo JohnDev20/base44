@@ -1,0 +1,70 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "shopping_list_id": {
+      "type": "string",
+      "title": "Lista"
+    },
+    "name": {
+      "type": "string",
+      "title": "Nome do produto"
+    },
+    "brand": {
+      "type": "string",
+      "title": "Marca"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 1,
+      "title": "Quantidade"
+    },
+    "unit": {
+      "type": "string",
+      "enum": [
+        "un",
+        "kg",
+        "g",
+        "L",
+        "ml",
+        "pacote",
+        "caixa",
+        "dz"
+      ],
+      "default": "un",
+      "title": "Unidade"
+    },
+    "category": {
+      "type": "string",
+      "title": "Categoria"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Observa\u00e7\u00f5es"
+    },
+    "estimated_price": {
+      "type": "number",
+      "default": 0,
+      "title": "Pre\u00e7o estimado"
+    },
+    "actual_price": {
+      "type": "number",
+      "default": 0,
+      "title": "Pre\u00e7o pago"
+    },
+    "is_purchased": {
+      "type": "boolean",
+      "default": false,
+      "title": "Comprado"
+    },
+    "purchased_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Data de compra"
+    }
+  },
+  "required": [
+    "shopping_list_id",
+    "name"
+  ]
+}

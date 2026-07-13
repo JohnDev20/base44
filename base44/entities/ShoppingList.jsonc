@@ -1,0 +1,32 @@
+{
+  "name": "ShoppingList",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Nome da lista"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed"
+      ],
+      "default": "active",
+      "title": "Status"
+    },
+    "color": {
+      "type": "string",
+      "default": "emerald",
+      "title": "Cor"
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Data de conclus\u00e3o"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

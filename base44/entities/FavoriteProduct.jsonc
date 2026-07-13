@@ -1,0 +1,47 @@
+{
+  "name": "FavoriteProduct",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Nome do produto"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Frutas e verduras",
+        "Carnes",
+        "Bebidas",
+        "Limpeza",
+        "Higiene",
+        "Alimentos",
+        "Outros"
+      ],
+      "default": "Outros",
+      "title": "Categoria"
+    },
+    "unit": {
+      "type": "string",
+      "enum": [
+        "un",
+        "kg",
+        "g",
+        "L",
+        "ml",
+        "pacote",
+        "caixa",
+        "dz"
+      ],
+      "default": "un",
+      "title": "Unidade"
+    },
+    "use_count": {
+      "type": "number",
+      "default": 1,
+      "title": "Vezes usado"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

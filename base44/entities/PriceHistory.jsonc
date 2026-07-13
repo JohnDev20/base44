@@ -1,0 +1,39 @@
+{
+  "name": "PriceHistory",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "title": "Produto"
+    },
+    "product_name": {
+      "type": "string",
+      "title": "Nome do produto"
+    },
+    "price": {
+      "type": "number",
+      "title": "Pre\u00e7o"
+    },
+    "shopping_list_id": {
+      "type": "string",
+      "title": "Lista"
+    },
+    "establishment": {
+      "type": "string",
+      "title": "Estabelecimento"
+    },
+    "change_type": {
+      "type": "string",
+      "enum": [
+        "created",
+        "edited"
+      ],
+      "default": "created",
+      "title": "Tipo de mudan\u00e7a"
+    }
+  },
+  "required": [
+    "product_name",
+    "price"
+  ]
+}
