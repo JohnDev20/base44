@@ -3,6 +3,7 @@ workflows:
     name: Gerar APK Android
     environment:
       node: 22
+      java: 21
     scripts:
       - name: Instalar dependências do projeto
         script: npm install
